@@ -2,15 +2,12 @@
 import { useState, useEffect } from 'react';
 import NftCard from '../components/nftcard';
 import {fetchNFTs} from '../utils/fetchNFTs';
-import { useAccount } from 'wagmi'
 
 const Explore = () => {
 
     const [owner, setOwner] = useState("")
     const [contractAddress, setContractAddress] = useState("")
     const [NFTs, setNFTs] = useState("")
-    const {address} = useAccount("")
-
     
 
     const connectWallet = async () => {
